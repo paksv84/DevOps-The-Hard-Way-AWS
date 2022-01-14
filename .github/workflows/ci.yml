@@ -24,8 +24,8 @@ jobs:
         working-directory: Terraform-AWS-Services-Creation/EKS-With-Worker-Nodes/
         run: |
           terraform init \
-            -backend-config "bucket=terraform-states-monitoring-platform" \
-            -backend-config "key=elasticsearch-terraform.tfstate"
+            -backend-config "bucket=terraform-state-devopsthehardway-1354687" \
+            -backend-config "key=eks-terraform-workernodes.tfstate"
           terraform workspace new dev || terraform workspace select dev
       - name: Terraform Format
         working-directory: Terraform-AWS-Services-Creation/EKS-With-Worker-Nodes/
